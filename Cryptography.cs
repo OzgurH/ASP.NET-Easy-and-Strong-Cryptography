@@ -25,7 +25,7 @@ public partial class SIFRELEME
             var DESKey = new[] { 200, 5, 78, 232, 9, 6, 0, 4 };
             var DESInitializationVector = new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             using (var cryptoProvider = new DESCryptoServiceProvider())
-            {
+            { 
                 using (var memoryStream = new MemoryStream())
                 {
                     using (var cryptoStream = new CryptoStream(memoryStream, cryptoProvider.CreateEncryptor(DESKey, DESInitializationVector), CryptoStreamMode.Write))
